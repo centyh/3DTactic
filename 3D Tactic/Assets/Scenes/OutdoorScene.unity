@@ -239,6 +239,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &36434659 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -271,6 +274,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &38632912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -555,6 +561,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &59361744
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,14 +674,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59361744}
-  m_LocalRotation: {x: 0.23911765, y: 0.3696438, z: -0.09904577, w: 0.89239913}
-  m_LocalPosition: {x: -8.38, y: 9.44, z: -7.56}
+  m_LocalRotation: {x: 0.23735265, y: 0.38516206, z: -0.10320388, w: 0.88581204}
+  m_LocalPosition: {x: -8.61, y: 9.44, z: -7.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 30, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 47, z: 0}
 --- !u!1001 &68730793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -789,6 +798,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &85882754 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -821,6 +833,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &95943955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -853,6 +868,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &96207900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -885,6 +903,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &119949852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -996,6 +1017,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &128793412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -1028,6 +1052,125 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
+--- !u!1 &144880784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144880789}
+  - component: {fileID: 144880788}
+  - component: {fileID: 144880787}
+  - component: {fileID: 144880786}
+  - component: {fileID: 144880790}
+  m_Layer: 0
+  m_Name: Enemy
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &144880786
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144880784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &144880787
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144880784}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2ce57a3c7fcef114691c39aadb8e6670, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &144880788
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144880784}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &144880789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144880784}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.5, y: 1.4, z: 8.45}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &144880790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144880784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d334d1a3148c034283f74c06a6b89ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turn: 0
+  moving: 0
+  move: 3
+  moveSpeed: 2
+  actualTargetTile: {fileID: 0}
 --- !u!1001 &145170818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1144,6 +1287,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &148027167 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -1176,6 +1322,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &155427238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1382,6 +1531,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &183605081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -1414,6 +1566,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &225944794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1614,6 +1769,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &245873575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1730,6 +1888,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &254145126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1846,6 +2007,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &270895702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -1878,6 +2042,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &271395924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2078,6 +2245,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &283932865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2278,6 +2448,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &331052987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2394,6 +2567,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &331795368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2510,6 +2686,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &349379581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2794,6 +2973,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &394703097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -2826,6 +3008,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &395675660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3026,6 +3211,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &409232831 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -3058,6 +3246,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &409433490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3174,6 +3365,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &431014790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -3206,6 +3400,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &440758939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3574,6 +3771,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &465993897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3774,6 +3974,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &478833529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3890,6 +4093,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &485984057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4006,6 +4212,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &489556373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4206,6 +4415,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &504558082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4322,6 +4534,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &509395731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4438,6 +4653,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &535991162 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -4470,6 +4688,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &537427859 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -4502,6 +4723,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &537434919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -4534,6 +4758,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &539790829 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -4566,6 +4793,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &541586475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -4598,6 +4828,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &542330166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4714,6 +4947,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &548442068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4830,6 +5066,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &560495437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -4862,6 +5101,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &565468261 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -4894,6 +5136,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &574241484 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -4926,6 +5171,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &577406598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -4958,6 +5206,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &590709118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5273,6 +5524,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &610396104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5389,6 +5643,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &619613342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5673,6 +5930,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &637225637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5789,6 +6049,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &646793614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -5821,6 +6084,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &650484512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -5853,6 +6119,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &652282041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6053,6 +6322,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &668658856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -6085,6 +6357,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &670703206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6201,6 +6476,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &679999757 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -6233,6 +6511,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &682751604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -6265,6 +6546,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &684306912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6465,6 +6749,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &694186100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6581,6 +6868,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &712221859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6697,6 +6987,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &721135093 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -6729,6 +7022,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &723117704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -6761,6 +7057,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &736431704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -6793,6 +7092,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &741488110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6993,6 +7295,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &779069880
 GameObject:
   m_ObjectHideFlags: 0
@@ -7090,7 +7395,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &779069885
 MonoBehaviour:
@@ -7104,9 +7409,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252e9a212b59c7d42967ec0e8af0253a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turn: 0
   moving: 0
   move: 5
   moveSpeed: 2
+  actualTargetTile: {fileID: 0}
 --- !u!1 &781989653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -7139,6 +7446,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &783400976 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -7171,6 +7481,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &790165170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7366,6 +7679,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &799943624 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -7398,6 +7714,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &809950550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7598,6 +7917,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &824429926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -7630,6 +7952,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &827322106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7746,6 +8071,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &840084494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7862,6 +8190,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &850300333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7978,6 +8309,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &865457637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8346,6 +8680,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &934154602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8993,6 +9330,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1024446502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9361,6 +9701,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1062324390 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -9393,6 +9736,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1064117179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9509,6 +9855,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1071278238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9625,6 +9974,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1080280542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -9657,6 +10009,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1082794006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9773,6 +10128,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1087945035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9889,6 +10247,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1095641932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -9921,6 +10282,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1106883431 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -9953,6 +10317,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1116476630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -9985,6 +10352,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1118898353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -10017,6 +10387,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1136249927 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -10049,6 +10422,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1165692629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10249,6 +10625,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1196804485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10449,6 +10828,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1235613247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -10481,6 +10863,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1239066399 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -10513,6 +10898,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1265882958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11135,6 +11523,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1288991589 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -11167,6 +11558,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1297205668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11344,7 +11738,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1311914509}
-  - component: {fileID: 1311914508}
   - component: {fileID: 1311914510}
   m_Layer: 0
   m_Name: GameManager
@@ -11352,27 +11745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1311914508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311914507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab62668cbee5b2545984bc10f35d993c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPosition: {fileID: 0}
-  WallMask:
-    serializedVersion: 2
-    m_Bits: 64
-  gridWorldSize: {x: 20, y: 20}
-  nodeRadius: 0.5
-  distance: 0
-  finalPath: []
+  m_IsActive: 1
 --- !u!4 &1311914509
 Transform:
   m_ObjectHideFlags: 0
@@ -11386,7 +11759,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1311914510
 MonoBehaviour:
@@ -11397,11 +11770,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1311914507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e8e426c52b4b4a4c95d64086db7dbc3, type: 3}
+  m_Script: {fileID: 11500000, guid: 17035ffa379196d47b5201c487a75593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {fileID: 0}
-  targetPosition: {fileID: 1577121907}
 --- !u!1001 &1314585912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11686,6 +12057,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1329209630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -11718,6 +12092,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1339560750 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -11750,6 +12127,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1341756338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12208,6 +12588,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1366864058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12492,6 +12875,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1382050943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12608,6 +12994,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1385663355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12724,6 +13113,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1399330116 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -12756,6 +13148,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1405494140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -12788,6 +13183,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1409509944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -12820,6 +13218,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1410349117 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -12852,6 +13253,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1413909797 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -12884,6 +13288,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1414587819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13000,6 +13407,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1436347155 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -13032,6 +13442,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1440131770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -13064,6 +13477,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1449003733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13310,6 +13726,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1467179620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -13342,6 +13761,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1471560392 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -13374,6 +13796,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1471986309 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -13406,6 +13831,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1476600970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13606,6 +14034,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1491866687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -13638,6 +14069,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1493587994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13838,6 +14272,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1502381427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14290,6 +14727,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1545911782 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -14322,6 +14762,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1549703755 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -14354,6 +14797,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1556532280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -14386,6 +14832,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1562303094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14502,6 +14951,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1563417477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14670,103 +15122,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c27d260273ddd8c4785ec859729374d9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3169bab5b06c8b84fbaf4db699d6c4a1, type: 3}
---- !u!1 &1577121903
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1577121907}
-  - component: {fileID: 1577121906}
-  - component: {fileID: 1577121905}
-  - component: {fileID: 1577121904}
-  m_Layer: 0
-  m_Name: TargetPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1577121904
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577121903}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1577121905
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577121903}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: fe9e9cc7d7277bc43aa7a3e7f339e364, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1577121906
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577121903}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1577121907
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577121903}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.52, y: 1, z: 5.59}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1585278966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -14799,6 +15154,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!4 &1593729804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444285068854363572, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -14837,6 +15195,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1598685502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -14869,6 +15230,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1616746638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -14901,6 +15265,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1629721959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15017,6 +15384,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1633581069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15217,6 +15587,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1650205074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15417,6 +15790,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1676656145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15617,6 +15993,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1690377693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -15649,6 +16028,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1702625150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15939,6 +16321,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1739792150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -15971,6 +16356,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1747941838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16087,6 +16475,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1753975753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -16119,6 +16510,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1761593762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16235,6 +16629,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1782067834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16435,6 +16832,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1788979361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16551,6 +16951,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1815222784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16830,6 +17233,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1849537675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17114,6 +17520,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1873422573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17309,6 +17718,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1898721739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17425,6 +17837,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1909367607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -17457,6 +17872,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1909910636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17825,6 +18243,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1954239125
 GameObject:
   m_ObjectHideFlags: 0
@@ -17957,6 +18378,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1967884818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -17989,6 +18413,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1969164943 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -18021,6 +18448,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1975640479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -18053,6 +18483,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1977216854 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -18085,6 +18518,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &1985156747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18285,6 +18721,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1998254793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -18317,6 +18756,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &2001287844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18596,6 +19038,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &2028591097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18712,6 +19157,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &2044017672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -18744,6 +19192,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &2048294457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19028,6 +19479,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &2067591910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19144,6 +19598,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &2077764599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -19176,6 +19633,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &2089098879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19460,6 +19920,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1001 &2112948813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19925,6 +20388,9 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &2142798566 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -19957,3 +20423,6 @@ MonoBehaviour:
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0

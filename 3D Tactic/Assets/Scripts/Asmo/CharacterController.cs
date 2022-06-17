@@ -14,6 +14,13 @@ public class CharacterController : TacticsMove
 
     void Update()
     {
+        Debug.DrawRay(transform.position, transform.forward);
+
+        if (!turn)
+        {
+            return;
+        }
+
         if (!moving)
         {
             FindSelectableTiles();

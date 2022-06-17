@@ -16,6 +16,11 @@ public class Tile : MonoBehaviour
     public Tile parent = null;
     public int distance = 0;
 
+    //A*
+    public float f = 0; // G + H, used to find the best path
+    public float g = 0; // Cost from parent to the current tile
+    public float h = 0; // Cost from current tile to destionation
+
 
     void Start()
     {
@@ -57,19 +62,21 @@ public class Tile : MonoBehaviour
         visited = false;
         parent = null;
         distance = 0;
+
+        f = g = h = 0;
     }
 
-    public void FindNeighbors()
+    public void FindNeighbors(Tile target)
     {
         Reset();
 
-        CheckTile(Vector3.forward);
-        CheckTile(-Vector3.forward);
-        CheckTile(Vector3.right);
-        CheckTile(-Vector3.right);
+        CheckTile(Vector3.forward, target);
+        CheckTile(-Vector3.forward, target);
+        CheckTile(Vector3.right, target);
+        CheckTile(-Vector3.right, target);
     }
 
-    public void CheckTile(Vector3 direction)
+    public void CheckTile(Vector3 direction, Tile target)
     {
         Vector3 halfExtents = new Vector3(0.25f, 0.25f, 0.25f);
 
@@ -82,7 +89,7 @@ public class Tile : MonoBehaviour
             {
                 RaycastHit hit;
 
-                if(!Physics.Raycast(tile.transform.position, Vector3.up, out hit, 1))
+                if(!Physics.Raycast(tile.transform.position, Vector3.up, out hit, 1) || (tile == target))
                 {
                     adjacencyList.Add(tile);
                 }  
