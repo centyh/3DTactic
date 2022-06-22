@@ -13,7 +13,7 @@ public class TacticsMove : MonoBehaviour
     Tile currentTile;
 
     public bool moving = false;
-    public int move = 5;
+    public int move = 5; //Siirretään unit dataan
     public float moveSpeed = 2;
 
     Vector3 velocity = new Vector3();
@@ -24,7 +24,7 @@ public class TacticsMove : MonoBehaviour
     public Tile actualTargetTile;
 
 
-    protected void Init()
+    protected void Init() //mahdollinen nimen muutos
     {
         tiles = GameObject.FindGameObjectsWithTag("Tile");
 

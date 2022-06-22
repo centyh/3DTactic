@@ -30,7 +30,7 @@ public class NPCMove : TacticsMove
         }
         else
         {
-            Move();
+            Move(); //perii nyt tacticsmoven tulee perimään unitdatan
         }
     }
 
