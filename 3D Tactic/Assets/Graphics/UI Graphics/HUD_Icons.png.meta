@@ -102,18 +102,350 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: HUD_CharacterIcon
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1255
+        width: 815
+        height: 777
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b690d0943f9aac449815186ea3cda761
+      internalID: 1019807259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_CharIconTurn
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1347
+        width: 644
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9e15e0ecdd38c41937ef24b8d6ac47
+      internalID: 1108516756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_AP_Icon
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1633
+        width: 300
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643f8632758342244bc777542eff8a20
+      internalID: 1459117343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_ActionButton
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 751
+        width: 434
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45da9419813139d41998758bc201d743
+      internalID: 831566261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_NameDisplay
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 1016
+        width: 704
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a6f31e58a0c064890b714aecdbb64d
+      internalID: -107854368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_AP_IconUsed
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1183
+        width: 300
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91802c9e4a2a66844b839923fba296bf
+      internalID: 1036785722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_SettingsButton
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 791
+        width: 309
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ad7676fb9280d488ae79e795a8047b
+      internalID: 37355686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_HP_SimpleFill
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 608
+        width: 1128
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc4d42df7b770b4cb33eca14c1aed79
+      internalID: 1009066787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_CharOrderIndicator
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 462
+        width: 462
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99fe6316ffcf0b842930c204d8998c20
+      internalID: -218859539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_EndTurnIcon
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 431
+        width: 183
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ea162f442528a48890b470bb66cf88
+      internalID: 706494988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_HP_Simple
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 457
+        width: 1141
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c09821317d74041b31f63dbacb88e5
+      internalID: 1298929613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_HP_RefinedFill
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 230
+        width: 1127
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c1d8c7af324ed4ebc9f47342348a36
+      internalID: -566589444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_GuardIcon
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 14
+        width: 287
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a079a724decc344ca91b0469f9c5e01
+      internalID: -903168315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_AttackIcon
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 36
+        width: 270
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0636c6126e969a7499822a4f409767ac
+      internalID: 1579545967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_HP_Refined
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 28
+        width: 1278
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de22779ad2c96a34ba75b55dffc5126c
+      internalID: 1080328076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1ffcaff4ae129c9499c98efdf340d44b
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HUD_Icons_14: -1109843386
+      HUD_NameDisplay: -107854368
+      HUD_GuardIcon: -903168315
+      HUD_AttackIcon: 1579545967
+      HUD_Icons_16: -1187603492
+      HUD_ActionButton: 831566261
+      HUD_AP_Icon: 1459117343
+      HUD_EndTurnIcon: 706494988
+      HUD_CharOrderIndicator: -218859539
+      HUD_HP_Simple: 1298929613
+      HUD_HP_Refined: 1080328076
+      HUD_SettingsButton: 37355686
+      HUD_HP_SimpleFill: 1009066787
+      HUD_CharacterIcon: 1019807259
+      HUD_CharIconTurn: 1108516756
+      HUD_AP_IconUsed: 1036785722
+      HUD_HP_RefinedFill: -566589444
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

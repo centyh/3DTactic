@@ -102,18 +102,194 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: UI_MainMenu
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 768
+        width: 772
+        height: 1247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3924b78e4c5ba4bab13de9aefd9861
+      internalID: -658820968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_PauseMenu
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 963
+        width: 776
+        height: 1033
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f6f322b6db66d448be85eb5f5ba8ca
+      internalID: -632187251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ButtonBlank
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 578
+        width: 469
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fe8e580bdcba6459aaa8f8b0148cf8
+      internalID: 343407547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ButtonOnHoverSmall
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 566
+        width: 443
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11debc44a122a64b834c7b31087af26
+      internalID: 2028297712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 465
+        width: 1007
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b649d77d82fbc6d4e8410b5248828245
+      internalID: 1571489301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ButtonOnHover
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 354
+        width: 521
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5790d9b06014944a0a5f44c7f2d422
+      internalID: 1204718517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ButtonBlankSmall
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 386
+        width: 392
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a7c2a79c826674ca25ea02ab3faa33
+      internalID: 268089001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Logo
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 18
+        width: 917
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769f8131e313f3e4db386d34dde89861
+      internalID: -1312547823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: eec8fe5065399dc448f8fcc87d56413b
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_GameOver: 1571489301
+      UI_Logo: -1312547823
+      UI_ButtonBlankSmall: 268089001
+      UI_ButtonOnHover: 1204718517
+      UI_ButtonBlank: 343407547
+      UI_ButtonOnHoverSmall: 2028297712
+      UI_MainMenu: -658820968
+      UI_PauseMenu: -632187251
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
