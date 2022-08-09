@@ -149,10 +149,10 @@ TextureImporter:
       name: UI_ButtonBlank
       rect:
         serializedVersion: 2
-        x: 41
-        y: 578
-        width: 469
-        height: 142
+        x: 17
+        y: 551
+        width: 521
+        height: 197
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,7 +280,7 @@ TextureImporter:
         width: 719
         height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
