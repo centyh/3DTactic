@@ -23,6 +23,7 @@ public class NPCMove : TacticsMove
 
         if (!moving)
         {
+            curState = GameState.EnemyTurn;
             FindNearestTarget();
             CalculatePath();
             FindSelectableTiles();

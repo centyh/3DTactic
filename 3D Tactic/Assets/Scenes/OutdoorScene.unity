@@ -711,6 +711,7 @@ GameObject:
   - component: {fileID: 59361747}
   - component: {fileID: 59361746}
   - component: {fileID: 59361745}
+  - component: {fileID: 59361749}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -810,13 +811,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59361744}
   m_LocalRotation: {x: 0.23735265, y: 0.38516206, z: -0.10320388, w: 0.88581204}
-  m_LocalPosition: {x: -8.61, y: 9.44, z: -7.33}
+  m_LocalPosition: {x: -8.87, y: 8.67, z: -7.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: 47, z: 0}
+--- !u!114 &59361749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59361744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf8cac4fae8237449b77d10afc2ded3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 779069884}
+  xAxis: -6.33
+  yAxis: 4.83
+  zAxis: -6.09
 --- !u!1001 &68730793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1301,10 +1318,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d334d1a3148c034283f74c06a6b89ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curState: 0
   turn: 0
   moving: 0
   move: 3
   moveSpeed: 2
+  attacking: 0
   actualTargetTile: {fileID: 0}
 --- !u!1001 &145170818
 PrefabInstance:
@@ -8733,11 +8752,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252e9a212b59c7d42967ec0e8af0253a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curState: 0
   turn: 0
   moving: 0
   move: 5
   moveSpeed: 2
+  attacking: 0
   actualTargetTile: {fileID: 0}
+  attackButtonActive: 0
+  moveButtonActive: 0
 --- !u!1 &781989653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 253032671611464986, guid: 3169bab5b06c8b84fbaf4db699d6c4a1,
@@ -10388,7 +10411,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 936003878}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779069885}
+        m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
+        m_MethodName: MoveButtonActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &936003878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15459,7 +15494,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1393884657}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779069885}
+        m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
+        m_MethodName: AttackButtonActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1393884657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18251,7 +18298,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1621833957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1311914510}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: EndTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1621833957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20102,7 +20161,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1188103259}
+      - m_Target: {fileID: 1930811779}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -23235,7 +23294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -79.00305, y: 79.6626}
+  m_AnchoredPosition: {x: -79.00293, y: 79.6626}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038952732
