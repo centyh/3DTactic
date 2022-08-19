@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GameState { PlayerTurn, EnemyTurn, GameOver };
+
 public class TacticsMove : MonoBehaviour
 {
+    public GameState curState;
+
     public bool turn = false;
 
     List<Tile> selectableTiles = new List<Tile>();
@@ -15,6 +19,7 @@ public class TacticsMove : MonoBehaviour
     public bool moving = false;
     public int move = 5; //Siirretään unit dataan
     public float moveSpeed = 2;
+    public bool attacking = false;
 
     Vector3 velocity = new Vector3();
     Vector3 heading = new Vector3();
@@ -276,6 +281,7 @@ public class TacticsMove : MonoBehaviour
 
         Debug.Log("Path not found");
     }
+
 
     public void BeginTurn()
     {

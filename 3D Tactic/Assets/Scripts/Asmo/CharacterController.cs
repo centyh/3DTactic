@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CharacterController : TacticsMove
 {
-    
+
+    public bool attackButtonActive = false;
+    public bool moveButtonActive = false;
 
 
     void Start()
@@ -23,9 +25,12 @@ public class CharacterController : TacticsMove
 
         if (!moving)
         {
+            curState = GameState.PlayerTurn;
             FindSelectableTiles();
             CheckMouse();
+                   
         }
+
         else
         {
             Move();
@@ -53,4 +58,19 @@ public class CharacterController : TacticsMove
             }
         }
     }
+
+    public void AttackButtonActive()
+    {
+        attackButtonActive = true;
+        Debug.Log("ATTACK BUTTON ACTIVE");
+    }
+
+    public void MoveButtonActive()
+    {
+        moveButtonActive = true;
+        Debug.Log("MOVE BUTTON ACTIVE");
+    }
+
+    
+
 }
