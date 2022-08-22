@@ -167,27 +167,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_ButtonOnHoverSmall
-      rect:
-        serializedVersion: 2
-        x: 530
-        y: 566
-        width: 443
-        height: 174
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a11debc44a122a64b834c7b31087af26
-      internalID: 2028297712
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: UI_GameOver
       rect:
         serializedVersion: 2
@@ -225,27 +204,6 @@ TextureImporter:
       bones: []
       spriteID: ef5790d9b06014944a0a5f44c7f2d422
       internalID: 1204718517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_ButtonBlankSmall
-      rect:
-        serializedVersion: 2
-        x: 553
-        y: 386
-        width: 392
-        height: 121
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4a7c2a79c826674ca25ea02ab3faa33
-      internalID: 268089001
       vertices: []
       indices: 
       edges: []
@@ -292,6 +250,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_VolumeBar
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 883
+        width: 405
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303facc078debdf4fa5e03c2903aac2c
+      internalID: -1108002230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_VolumeIcon
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 1798
+        width: 68
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2999ec685c477cd4abd555941e5454bd
+      internalID: -1380980124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_VolumeSlider
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 1710
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263e58a7292dd3d479d2c13e5f0e2757
+      internalID: -107902682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -307,9 +328,12 @@ TextureImporter:
       UI_Logo: -1312547823
       UI_ButtonBlankSmall: 268089001
       UI_NamePlate: -407940271
+      UI_VolumeIcon: -1380980124
       UI_ButtonOnHover: 1204718517
       UI_ButtonBlank: 343407547
+      UI_VolumeSlider: -107902682
       UI_ButtonOnHoverSmall: 2028297712
+      UI_VolumeBar: -1108002230
       UI_MainMenu: -658820968
       UI_PauseMenu: -632187251
   spritePackingTag: 
