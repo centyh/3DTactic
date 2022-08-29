@@ -14,7 +14,7 @@ public class Volume : MonoBehaviour
     }
 
     
-
+    //Asetetaan Sliderin OnValueChanged-toimintoon = Tallentaa PlayerPrefsin avulla sen arvon mihin sen Slideriss‰ j‰tt‰‰
     public void SaveVolume()
     {
         float volumeValue = volumeSlider.value;
@@ -22,6 +22,7 @@ public class Volume : MonoBehaviour
         LoadValue();
     }
 
+    //Kun Scene avautuu, lataa viimeisimm‰n Sliderin arvon
     void LoadValue()
     {
         float volumeValue = PlayerPrefs.GetFloat("VolumeValue");
