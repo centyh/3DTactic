@@ -6,8 +6,9 @@ public enum GameState { PlayerTurn, EnemyTurn, GameOver };
 
 public class TacticsMove : MonoBehaviour
 {
-    public GameState curState;
+    public int actionPoints = 3;
 
+    public GameState curState;
     public bool turn = false;
 
     List<Tile> selectableTiles = new List<Tile>();
@@ -28,6 +29,13 @@ public class TacticsMove : MonoBehaviour
 
     public Tile actualTargetTile;
 
+    public GameObject enemy;
+
+
+    private void Start()
+    {
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+    }
 
     protected void Init() //mahdollinen nimen muutos
     {
@@ -100,6 +108,9 @@ public class TacticsMove : MonoBehaviour
             }    
         }
     }
+
+   
+
 
     public void MoveToTile(Tile tile)
     {

@@ -32,11 +32,11 @@ public class Tile : MonoBehaviour
     {
         if (current)
         {
-            GetComponent<Renderer>().material.color = Color.black;
+            GetComponent<Renderer>().material.color = Color.grey;
         }
         else if(target)
         {
-            GetComponent<Renderer>().material.color = Color.green;
+            GetComponent<Renderer>().material.color = Color.blue;
         }
         else if (selectable)
         {

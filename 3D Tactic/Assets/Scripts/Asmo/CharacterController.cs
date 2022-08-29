@@ -5,18 +5,23 @@ using UnityEngine;
 public class CharacterController : TacticsMove
 {
 
-    public bool attackButtonActive = false;
-    public bool moveButtonActive = false;
+    public ButtonFunctionality buttonF;
+
 
 
     void Start()
     {
         Init();
+        actionPoints = 3;
+
     }
+
+    
 
     void Update()
     {
         Debug.DrawRay(transform.position, transform.forward);
+
 
         if (!turn)
         {
@@ -25,15 +30,14 @@ public class CharacterController : TacticsMove
 
         if (!moving)
         {
-            curState = GameState.PlayerTurn;
             FindSelectableTiles();
             CheckMouse();
-                   
+            IsAbleToAttack();
         }
 
         else
         {
-            Move();
+            Move();           
         }
         
     }
@@ -42,33 +46,48 @@ public class CharacterController : TacticsMove
     {
         if (Input.GetMouseButtonUp(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            RaycastHit hit;
-            if(Physics.Raycast(ray, out hit))
+            if (buttonF.moveButtonActive)
             {
-                if(hit.collider.tag == "Tile")
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
                 {
-                    Tile t = hit.collider.GetComponent<Tile>();
-                    if (t.selectable)
+                    if (hit.collider.tag == "Tile")
                     {
-                        MoveToTile(t);
+                        Tile t = hit.collider.GetComponent<Tile>();
+                        if (t.selectable)
+                        {
+                            MoveToTile(t);
+                            buttonF.MoveButtonDeactive();
+                        }
+                    }
+                }
+            } 
+        }
+        
+    }
+
+    void IsAbleToAttack()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (buttonF.attackButtonActive)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.transform.gameObject.tag == "Enemy")
+                    {
+                        Debug.Log("OSUIT VIHOLLISEENN");
+                        
                     }
                 }
             }
+
         }
-    }
-
-    public void AttackButtonActive()
-    {
-        attackButtonActive = true;
-        Debug.Log("ATTACK BUTTON ACTIVE");
-    }
-
-    public void MoveButtonActive()
-    {
-        moveButtonActive = true;
-        Debug.Log("MOVE BUTTON ACTIVE");
     }
 
     
