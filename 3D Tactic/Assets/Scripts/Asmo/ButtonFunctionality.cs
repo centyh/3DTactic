@@ -9,8 +9,8 @@ public class ButtonFunctionality : MonoBehaviour, IPointerClickHandler
     public UnityEvent onLeft;
     public UnityEvent onRight;
 
-    public bool attackButtonActive = false;
-    public bool moveButtonActive = false;
+    public static bool attackButtonActive = false;
+    public static bool moveButtonActive = false;
 
 
     public void OnPointerClick(PointerEventData eventData)
@@ -34,7 +34,7 @@ public class ButtonFunctionality : MonoBehaviour, IPointerClickHandler
     
     void Update()
     {
-        
+
     }
 
     public void AttackButtonActive()

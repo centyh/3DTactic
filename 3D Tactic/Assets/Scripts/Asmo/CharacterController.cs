@@ -6,7 +6,9 @@ public class CharacterController : TacticsMove
 {
 
     public ButtonFunctionality buttonF;
+    public EnemyHealth enemyHealth;
 
+    public int damage = 20;
 
 
     void Start()
@@ -28,7 +30,7 @@ public class CharacterController : TacticsMove
             return;
         }
 
-        if (!moving)
+        if (!moving && actionPoints > 0)
         {
             FindSelectableTiles();
             CheckMouse();
@@ -46,7 +48,7 @@ public class CharacterController : TacticsMove
     {
         if (Input.GetMouseButtonUp(0))
         {
-            if (buttonF.moveButtonActive)
+            if (ButtonFunctionality.moveButtonActive)
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -60,6 +62,7 @@ public class CharacterController : TacticsMove
                         {
                             MoveToTile(t);
                             buttonF.MoveButtonDeactive();
+                            actionPoints -= 1;
                         }
                     }
                 }
@@ -70,9 +73,11 @@ public class CharacterController : TacticsMove
 
     void IsAbleToAttack()
     {
-        if (Input.GetMouseButtonDown(0))
+
+
+        if (ButtonFunctionality.attackButtonActive)
         {
-            if (buttonF.attackButtonActive)
+            if (Input.GetMouseButtonDown(0))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -81,13 +86,16 @@ public class CharacterController : TacticsMove
                 {
                     if (hit.transform.gameObject.tag == "Enemy")
                     {
-                        Debug.Log("OSUIT VIHOLLISEENN");
-                        
+                        int randDmg = Random.Range(10, 20);
+                        enemyHealth.EnemyTakeDamage(randDmg);
+                        Debug.Log(randDmg);
+                        actionPoints -= 1;
                     }
                 }
             }
 
         }
+
     }
 
     

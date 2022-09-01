@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
 
-
+    
 
     void Start()
     {
 
     }
 
-   
+    private void Update()
+    {
+
+    }
+
     //Kaikki alapuolella olevat metodit liitet‰‰n Buttoneihin
 
     //Pelin aloitus

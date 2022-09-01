@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { PlayerTurn, EnemyTurn, GameOver };
 
 public class TacticsMove : MonoBehaviour
 {
     public int actionPoints = 3;
 
-    public GameState curState;
     public bool turn = false;
 
     List<Tile> selectableTiles = new List<Tile>();
@@ -19,6 +17,7 @@ public class TacticsMove : MonoBehaviour
 
     public bool moving = false;
     public int move = 5; //Siirretään unit dataan
+    public int attackMove = 3;
     public float moveSpeed = 2;
     public bool attacking = false;
 
@@ -34,15 +33,16 @@ public class TacticsMove : MonoBehaviour
 
     private void Start()
     {
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        
     }
 
     protected void Init() //mahdollinen nimen muutos
     {
         tiles = GameObject.FindGameObjectsWithTag("Tile");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
 
         halfHeight = GetComponent<Collider>().bounds.extents.y;
-
+        
         TurnManager.AddUnit(this);
     }
 
@@ -76,37 +76,77 @@ public class TacticsMove : MonoBehaviour
 
     public void FindSelectableTiles()
     {
-        ComputeAdjacencyLists(null);
-        GetCurrentTile();
-
-        Queue<Tile> process = new Queue<Tile>();
-
-        process.Enqueue(currentTile);
-        currentTile.visited = true;
-        //currentTile.parent = null      Leave as null
-
-        while(process.Count > 0)
+        if (ButtonFunctionality.moveButtonActive)
         {
-            Tile t = process.Dequeue();
+            ComputeAdjacencyLists(null);
+            GetCurrentTile();
 
-            selectableTiles.Add(t);
-            t.selectable = true;
+            Queue<Tile> process = new Queue<Tile>();
 
+            process.Enqueue(currentTile);
+            currentTile.visited = true;
+            //currentTile.parent = null      Leave as null
 
-            if(t.distance < move)
+            while (process.Count > 0)
             {
-                foreach (Tile tile in t.adjacencyList)
+                Tile t = process.Dequeue();
+
+                selectableTiles.Add(t);
+                t.selectable = true;
+
+
+                if (t.distance < move)
                 {
-                    if (!tile.visited)
+                    foreach (Tile tile in t.adjacencyList)
                     {
-                        tile.parent = t;
-                        tile.visited = true;
-                        tile.distance = 1 + t.distance;
-                        process.Enqueue(tile);
+                        if (!tile.visited)
+                        {
+                            tile.parent = t;
+                            tile.visited = true;
+                            tile.distance = 1 + t.distance;
+                            process.Enqueue(tile);
+                        }
                     }
                 }
-            }    
+            }
         }
+        else if (ButtonFunctionality.attackButtonActive)
+        {
+            ComputeAdjacencyLists(null);
+            GetCurrentTile();
+
+            Queue<Tile> process = new Queue<Tile>();
+
+            process.Enqueue(currentTile);
+            currentTile.visited = true;
+            //currentTile.parent = null      Leave as null
+
+            while (process.Count > 0)
+            {
+                Tile t = process.Dequeue();
+
+                selectableTiles.Add(t);
+                t.selectable = true;
+
+
+                if (t.distance < attackMove)
+                {
+                    foreach (Tile tile in t.adjacencyList)
+                    {
+                        if (!tile.visited)
+                        {
+                            tile.parent = t;
+                            tile.visited = true;
+                            tile.distance = 1 + t.distance;
+                            process.Enqueue(tile);
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        
     }
 
    
