@@ -7,8 +7,8 @@ public class CharacterController : TacticsMove
 
     public ButtonFunctionality buttonF;
     public EnemyHealth enemyHealth;
+    public APSpriteChange apSpriteChange;
 
-    public int damage = 20;
 
 
     void Start()
@@ -63,6 +63,7 @@ public class CharacterController : TacticsMove
                             MoveToTile(t);
                             buttonF.MoveButtonDeactive();
                             actionPoints -= 1;
+                            apSpriteChange.APUsed();
                         }
                     }
                 }
@@ -73,8 +74,6 @@ public class CharacterController : TacticsMove
 
     void IsAbleToAttack()
     {
-
-
         if (ButtonFunctionality.attackButtonActive)
         {
             if (Input.GetMouseButtonDown(0))

@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
 
     }
 
-    //Kaikki alapuolella olevat metodit liitet‰‰n Buttoneihin
+
 
     //Pelin aloitus
     public void PlayGame()
