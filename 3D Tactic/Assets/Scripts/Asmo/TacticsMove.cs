@@ -28,8 +28,7 @@ public class TacticsMove : MonoBehaviour
 
     public Tile actualTargetTile;
 
-    public GameObject enemy;
-
+    public Animator playerAnim;
 
     private void Start()
     {
@@ -39,7 +38,6 @@ public class TacticsMove : MonoBehaviour
     protected void Init() //mahdollinen nimen muutos
     {
         tiles = GameObject.FindGameObjectsWithTag("Tile");
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
 
         halfHeight = GetComponent<Collider>().bounds.extents.y;
         
@@ -179,7 +177,7 @@ public class TacticsMove : MonoBehaviour
             {
                 CalculateHeading(target);
                 SetHorizontalVelocity();
-
+                playerAnim.SetBool("isWalking", true);
                 transform.forward = heading;
                 transform.position += velocity * Time.deltaTime;
 
@@ -187,6 +185,7 @@ public class TacticsMove : MonoBehaviour
             else
             {
                 //Tile center reached
+                playerAnim.SetBool("isWalking", false);
                 transform.position = target;
                 path.Pop();
             }

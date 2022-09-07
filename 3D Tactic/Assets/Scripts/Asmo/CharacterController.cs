@@ -8,13 +8,15 @@ public class CharacterController : TacticsMove
     public ButtonFunctionality buttonF;
     public EnemyHealth enemyHealth;
     public APSpriteChange apSpriteChange;
+    public EnemyRadar radar;
 
 
 
     void Start()
     {
         Init();
-        actionPoints = 3;
+        actionPoints = 10;
+        
 
     }
 
@@ -65,7 +67,9 @@ public class CharacterController : TacticsMove
                             actionPoints -= 1;
                             apSpriteChange.APUsed();
                         }
+
                     }
+
                 }
             } 
         }
@@ -74,7 +78,7 @@ public class CharacterController : TacticsMove
 
     void IsAbleToAttack()
     {
-        if (ButtonFunctionality.attackButtonActive)
+        if (ButtonFunctionality.attackButtonActive && radar.enemyContact)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -85,6 +89,7 @@ public class CharacterController : TacticsMove
                 {
                     if (hit.transform.gameObject.tag == "Enemy")
                     {
+                        playerAnim.SetTrigger("attacking");
                         int randDmg = Random.Range(10, 20);
                         enemyHealth.EnemyTakeDamage(randDmg);
                         Debug.Log(randDmg);
