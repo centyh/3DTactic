@@ -89,8 +89,9 @@ public class CharacterController : TacticsMove
                 {
                     if (hit.transform.gameObject.tag == "Enemy")
                     {
+                        
                         playerAnim.SetTrigger("attacking");
-                        int randDmg = Random.Range(10, 20);
+                        int randDmg = Random.Range(40, 75);
                         enemyHealth.EnemyTakeDamage(randDmg);
                         Debug.Log(randDmg);
                         actionPoints -= 1;
