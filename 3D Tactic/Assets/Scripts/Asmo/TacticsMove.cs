@@ -197,7 +197,7 @@ public class TacticsMove : MonoBehaviour
             RemoveSelectableTiles();
             moving = false;
 
-            TurnManager.EndTurn(); //End turn after movement, Action Points later
+            //TurnManager.EndTurn(); //End turn after movement, Action Points later
         }
     }
 

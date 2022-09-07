@@ -2399,29 +2399,6 @@ MonoBehaviour:
   f: 0
   g: 0
   h: 0
---- !u!114 &47559879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47559873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0d240932d18d3f43b2acbaa8d02e586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkable: 1
-  current: 0
-  target: 0
-  selectable: 0
-  adjacencyList: []
-  visited: 0
-  parent: {fileID: 0}
-  distance: 0
-  f: 0
-  g: 0
-  h: 0
 --- !u!1 &47822312 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1749672836230465682, guid: fb1d7990c0108da4d8a72ca214166b37,
@@ -2932,8 +2909,8 @@ Camera:
   m_GameObject: {fileID: 59361744}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4073,29 +4050,6 @@ Transform:
   m_PrefabInstance: {fileID: 1229548024}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &75061229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75061227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0d240932d18d3f43b2acbaa8d02e586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkable: 1
-  current: 0
-  target: 0
-  selectable: 0
-  adjacencyList: []
-  visited: 0
-  parent: {fileID: 0}
-  distance: 0
-  f: 0
-  g: 0
-  h: 0
---- !u!114 &75061233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8906,7 +8860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0025634766, y: -440.27002}
+  m_AnchoredPosition: {x: 0.0024414062, y: -440.27002}
   m_SizeDelta: {x: -0.0050049, y: -880.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &171818922
@@ -22979,29 +22933,6 @@ Transform:
   m_PrefabInstance: {fileID: 365805834}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &464985948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464985946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0d240932d18d3f43b2acbaa8d02e586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkable: 1
-  current: 0
-  target: 0
-  selectable: 0
-  adjacencyList: []
-  visited: 0
-  parent: {fileID: 0}
-  distance: 0
-  f: 0
-  g: 0
-  h: 0
---- !u!114 &464985952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109729,11 +109660,9 @@ Transform:
   - {fileID: 8837835}
   - {fileID: 1326133744}
   - {fileID: 1774435370}
-  - {fileID: 238060264}
   - {fileID: 1022973077}
   - {fileID: 1203834997}
   - {fileID: 1964670593}
-  - {fileID: 541265643}
   - {fileID: 90833075}
   - {fileID: 578496264}
   - {fileID: 229108175}
@@ -109741,7 +109670,6 @@ Transform:
   - {fileID: 1281195392}
   - {fileID: 47559874}
   - {fileID: 2123599022}
-  - {fileID: 1286483657}
   - {fileID: 464985947}
   - {fileID: 75061228}
   - {fileID: 1620280612}
@@ -110224,6 +110152,7 @@ Transform:
   - {fileID: 115147344}
   - {fileID: 24301611}
   - {fileID: 1237295799}
+  - {fileID: 1286483657}
   - {fileID: 1310553753}
   - {fileID: 1287217698}
   - {fileID: 1454626518}
@@ -110234,6 +110163,7 @@ Transform:
   - {fileID: 28297711}
   - {fileID: 2139501152}
   - {fileID: 43067622}
+  - {fileID: 254546023}
   - {fileID: 1427694359}
   - {fileID: 1003008995}
   - {fileID: 149860505}
@@ -110271,6 +110201,7 @@ Transform:
   - {fileID: 324075909}
   - {fileID: 1666935843}
   - {fileID: 1986184566}
+  - {fileID: 238060264}
   - {fileID: 770177757}
   - {fileID: 1428466647}
   - {fileID: 896797457}
@@ -110280,7 +110211,9 @@ Transform:
   - {fileID: 1002685804}
   - {fileID: 458751607}
   - {fileID: 1343483085}
+  - {fileID: 1337133606}
   - {fileID: 2011626698}
+  - {fileID: 1965611161}
   - {fileID: 437732460}
   - {fileID: 1559429056}
   - {fileID: 947123238}
@@ -110289,13 +110222,11 @@ Transform:
   - {fileID: 275681646}
   - {fileID: 1934775515}
   - {fileID: 1312287675}
-  - {fileID: 1337133606}
   - {fileID: 355836891}
-  - {fileID: 254546023}
   - {fileID: 767151322}
   - {fileID: 552833406}
   - {fileID: 1183034182}
-  - {fileID: 1965611161}
+  - {fileID: 541265643}
   - {fileID: 869942666}
   - {fileID: 1158348561}
   - {fileID: 974886833}
@@ -110803,29 +110734,6 @@ Transform:
   m_PrefabInstance: {fileID: 702729085}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2123599023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123599021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0d240932d18d3f43b2acbaa8d02e586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkable: 1
-  current: 0
-  target: 0
-  selectable: 0
-  adjacencyList: []
-  visited: 0
-  parent: {fileID: 0}
-  distance: 0
-  f: 0
-  g: 0
-  h: 0
---- !u!114 &2123599027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

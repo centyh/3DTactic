@@ -89,6 +89,7 @@ public class CharacterController : TacticsMove
                         enemyHealth.EnemyTakeDamage(randDmg);
                         Debug.Log(randDmg);
                         actionPoints -= 1;
+                        apSpriteChange.APUsed();
                     }
                 }
             }
