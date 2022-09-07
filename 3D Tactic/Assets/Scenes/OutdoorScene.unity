@@ -7698,6 +7698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df591af2ab0f44a4ca899f9c773e25ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAnim: {fileID: 1230471836}
 --- !u!1001 &147213057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61552,6 +61553,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb1d7990c0108da4d8a72ca214166b37, type: 3}
+--- !u!95 &1230471836 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5178180918403374370, guid: 394f3ac1d8f20bf4cb311765650f6a5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1645340550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1230759732
 PrefabInstance:
   m_ObjectHideFlags: 0
