@@ -10,12 +10,12 @@ public class CharacterController : TacticsMove
     public APSpriteChange apSpriteChange;
     public EnemyRadar radar;
 
-
+    
 
     void Start()
     {
         Init();
-        actionPoints = 10;
+        actionPoints = 3;
         
 
     }

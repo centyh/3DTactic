@@ -7,7 +7,7 @@ public class APSpriteChange : MonoBehaviour
 {
 
     private float amountUsed = .33f;
-    private float waitTime = 1f;
+
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class APSpriteChange : MonoBehaviour
 
         image.fillAmount -= amountUsed;
 
-        //this.gameObject.GetComponent<Image>().fillAmount -= full / amountUsed;
+        
     }
 
 }
