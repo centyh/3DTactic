@@ -7672,7 +7672,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144880784}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d334d1a3148c034283f74c06a6b89ae, type: 3}
   m_Name: 
@@ -7685,6 +7685,7 @@ MonoBehaviour:
   moveSpeed: 2
   attacking: 0
   actualTargetTile: {fileID: 0}
+  playerAnim: {fileID: 0}
 --- !u!114 &144880791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38233,11 +38234,11 @@ MonoBehaviour:
   moveSpeed: 2
   attacking: 0
   actualTargetTile: {fileID: 0}
+  playerAnim: {fileID: 357851888702079252}
   buttonF: {fileID: 936003880}
   enemyHealth: {fileID: 144880791}
   apSpriteChange: {fileID: 512149012}
   radar: {fileID: 230992180}
-  playerAnim: {fileID: 357851888702079252}
 --- !u!1001 &780185276
 PrefabInstance:
   m_ObjectHideFlags: 0
