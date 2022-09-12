@@ -20,6 +20,8 @@ public class TurnManager : MonoBehaviour
         {
             InitTeamTurnQueue();
         }
+
+        Debug.Log(turnTeam.Count);
     }
 
     static void InitTeamTurnQueue()

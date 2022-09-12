@@ -28,7 +28,7 @@ public class TacticsMove : MonoBehaviour
 
     public Tile actualTargetTile;
 
-    public Animator playerAnim;
+    
 
     private void Start()
     {
@@ -177,7 +177,7 @@ public class TacticsMove : MonoBehaviour
             {
                 CalculateHeading(target);
                 SetHorizontalVelocity();
-                playerAnim.SetBool("isWalking", true);
+                
                 transform.forward = heading;
                 transform.position += velocity * Time.deltaTime;
 
@@ -185,7 +185,7 @@ public class TacticsMove : MonoBehaviour
             else
             {
                 //Tile center reached
-                playerAnim.SetBool("isWalking", false);
+                
                 transform.position = target;
                 path.Pop();
             }
