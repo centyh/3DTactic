@@ -10,15 +10,12 @@ public class CharacterController : TacticsMove
     public APSpriteChange apSpriteChange;
     public EnemyRadar radar;
 
-    
+    public Animator playerAnim;
 
     void Start()
     {
         Init();
-        actionPoints = 10;
-
-
-        
+             
     }
 
     
@@ -26,24 +23,26 @@ public class CharacterController : TacticsMove
     void Update()
     {
         Debug.DrawRay(transform.position, transform.forward);
-
+        Debug.Log("PLAYER APS: " + actionPoints);
 
         if (!turn)
         {
             return;
         }
 
-        if (!moving && actionPoints > 0)
+        if (!moving)
         {
             FindSelectableTiles();
             CheckMouse();
             IsAbleToAttack();
-            
+            playerAnim.SetBool("isWalking", false);
+
         }
 
         else
         {
-            Move();           
+            Move();
+            playerAnim.SetBool("isWalking", true);
         }
         
     }
@@ -66,7 +65,6 @@ public class CharacterController : TacticsMove
                         {
                             MoveToTile(t);
                             buttonF.MoveButtonDeactive();
-                            actionPoints -= 1;
                             apSpriteChange.APUsed();
                             
 

@@ -6,14 +6,19 @@ public class NPCMove : TacticsMove
 {
     GameObject target;
 
+    
+
     void Start()
     {
         Init();
+        
     }
 
 
     void Update()
     {
+        Debug.Log("ENEMY APS: " + actionPoints);
+
         Debug.DrawRay(transform.position, transform.forward);
 
         if (!turn)
@@ -23,6 +28,7 @@ public class NPCMove : TacticsMove
 
         if (!moving)
         {
+            actionPoints = 1;
             FindNearestTarget();
             CalculatePath();
             FindSelectableTiles();
@@ -30,8 +36,11 @@ public class NPCMove : TacticsMove
         }
         else
         {
-            Move(); //perii nyt tacticsmoven tulee perimään unitdatan
+            Move();
+            
         }
+
+        
     }
 
     void CalculatePath()
@@ -60,4 +69,5 @@ public class NPCMove : TacticsMove
 
         target = nearest;
     }
+
 }

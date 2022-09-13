@@ -2023,6 +2023,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch
       objectReference: {fileID: 0}
+    - target: {fileID: 6954670173676264538, guid: 7aa80ce857b892b4ab3d510c12707120,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7766496042275178208, guid: 7aa80ce857b892b4ab3d510c12707120,
         type: 3}
       propertyPath: m_RootOrder

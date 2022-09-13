@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
 
     public Animator enemyAnim;
 
+
     void Start()
     {
         health = maxHealth;
@@ -16,7 +17,16 @@ public class EnemyHealth : MonoBehaviour
 
     void Update()
     {
-        EnemyDeath();
+        if(health <= 0)
+        {
+            EnemyDeath();
+        }
+        else
+        {
+            return;
+        }
+        
+
     }
 
     public void EnemyTakeDamage(int dmg)
@@ -30,11 +40,8 @@ public class EnemyHealth : MonoBehaviour
 
     void EnemyDeath()
     {
-        if(health <= 0)
-        {
-            enemyAnim.SetBool("isDead", true);
-            //Destroy(gameObject);
-        }
-        
+        enemyAnim.SetBool("isDead", true);
+        //Destroy(gameObject);
+
     }
 }
