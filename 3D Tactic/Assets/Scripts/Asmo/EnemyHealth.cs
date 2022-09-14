@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public static float health;
+    public float health;
     float maxHealth = 100f;
 
     public Animator enemyAnim;
@@ -41,7 +41,7 @@ public class EnemyHealth : MonoBehaviour
     void EnemyDeath()
     {
         enemyAnim.SetBool("isDead", true);
-        //Destroy(gameObject);
+        Destroy(gameObject, 2.7f);
 
     }
 }

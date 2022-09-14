@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TacticsMove : MonoBehaviour
 {
-    public int actionPoints = 3;
+    public int actionPoints;
 
     public bool turn = false;
 
@@ -28,7 +28,6 @@ public class TacticsMove : MonoBehaviour
 
     public Tile actualTargetTile;
 
-    
 
     private void Start()
     {
@@ -155,7 +154,6 @@ public class TacticsMove : MonoBehaviour
         path.Clear();
         tile.target = true;
         moving = true;
-        //actionPoints -= 1;
 
         Tile next = tile;
         while(next != null)
@@ -194,7 +192,7 @@ public class TacticsMove : MonoBehaviour
             }
 
         }
-        else //if(actionPoints <= 0)
+        else
         {
             RemoveSelectableTiles();
             moving = false;

@@ -21,7 +21,6 @@ public class TurnManager : MonoBehaviour
             InitTeamTurnQueue();
         }
 
-        Debug.Log(turnTeam.Count);
     }
 
     static void InitTeamTurnQueue()
@@ -41,6 +40,7 @@ public class TurnManager : MonoBehaviour
         if(turnTeam.Count > 0)
         {
             turnTeam.Peek().BeginTurn();
+            
         }
     }
 

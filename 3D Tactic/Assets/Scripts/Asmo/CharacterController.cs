@@ -15,7 +15,6 @@ public class CharacterController : TacticsMove
     void Start()
     {
         Init();
-             
     }
 
     
@@ -27,6 +26,7 @@ public class CharacterController : TacticsMove
 
         if (!turn)
         {
+            playerAnim.SetBool("isWalking", false);
             return;
         }
 

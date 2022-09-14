@@ -17,7 +17,6 @@ public class NPCMove : TacticsMove
 
     void Update()
     {
-        Debug.Log("ENEMY APS: " + actionPoints);
 
         Debug.DrawRay(transform.position, transform.forward);
 
@@ -28,7 +27,6 @@ public class NPCMove : TacticsMove
 
         if (!moving)
         {
-            actionPoints = 1;
             FindNearestTarget();
             CalculatePath();
             FindSelectableTiles();
