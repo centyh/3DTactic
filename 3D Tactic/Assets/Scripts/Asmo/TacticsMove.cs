@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TacticsMove : MonoBehaviour
 {
-    public int actionPoints = 3;
+    public int actionPoints;
 
     public bool turn = false;
 
@@ -24,11 +24,10 @@ public class TacticsMove : MonoBehaviour
     Vector3 velocity = new Vector3();
     Vector3 heading = new Vector3();
 
-    float halfHeight = 0;
+    float halfHeight = 0f;
 
     public Tile actualTargetTile;
 
-    public Animator playerAnim;
 
     private void Start()
     {
@@ -161,6 +160,7 @@ public class TacticsMove : MonoBehaviour
         {
             path.Push(next);
             next = next.parent;
+            
         }
     }
 
@@ -168,6 +168,7 @@ public class TacticsMove : MonoBehaviour
     {
         if(path.Count > 0)
         {
+            
             Tile t = path.Peek();
             Vector3 target = t.transform.position;
 
@@ -177,7 +178,7 @@ public class TacticsMove : MonoBehaviour
             {
                 CalculateHeading(target);
                 SetHorizontalVelocity();
-                playerAnim.SetBool("isWalking", false);
+                
                 transform.forward = heading;
                 transform.position += velocity * Time.deltaTime;
 
@@ -185,7 +186,7 @@ public class TacticsMove : MonoBehaviour
             else
             {
                 //Tile center reached
-                playerAnim.SetBool("isWalking", false);
+                
                 transform.position = target;
                 path.Pop();
             }

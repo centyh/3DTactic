@@ -6,14 +6,18 @@ public class NPCMove : TacticsMove
 {
     GameObject target;
 
+    
+
     void Start()
     {
         Init();
+        
     }
 
 
     void Update()
     {
+
         Debug.DrawRay(transform.position, transform.forward);
 
         if (!turn)
@@ -30,8 +34,11 @@ public class NPCMove : TacticsMove
         }
         else
         {
-            Move(); //perii nyt tacticsmoven tulee perimään unitdatan
+            Move();
+            
         }
+
+        
     }
 
     void CalculatePath()
@@ -60,4 +67,5 @@ public class NPCMove : TacticsMove
 
         target = nearest;
     }
+
 }

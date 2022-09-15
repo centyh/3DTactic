@@ -12,6 +12,7 @@ public class Dialogue : MonoBehaviour
 
     public GameObject playerText;
     public GameObject npcText;
+    public GameObject sceneTransition;
 
     private int index;
 
@@ -64,6 +65,11 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    void ChangeScene()
+    {
+        SceneManager.LoadScene("OutdoorScene");
+    }
+
     void NextLine()
     {
         if(index < lines.Length - 1)
@@ -74,8 +80,10 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            sceneTransition.SetActive(true);
+            Invoke("ChangeScene", 2f);
             gameObject.SetActive(false);
-            SceneManager.LoadScene("OutdoorScene");
+            
         }
     }
 }
