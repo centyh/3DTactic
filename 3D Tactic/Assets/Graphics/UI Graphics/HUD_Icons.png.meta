@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HUD_CharacterIcon
+      name: HUD_MovementIcon
       rect:
         serializedVersion: 2
-        x: 41
-        y: 1255
-        width: 815
-        height: 777
+        x: 12
+        y: 1366
+        width: 665
+        height: 673
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,27 +120,6 @@ TextureImporter:
       bones: []
       spriteID: b690d0943f9aac449815186ea3cda761
       internalID: 1019807259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HUD_CharIconTurn
-      rect:
-        serializedVersion: 2
-        x: 961
-        y: 1347
-        width: 644
-        height: 648
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca9e15e0ecdd38c41937ef24b8d6ac47
-      internalID: 1108516756
       vertices: []
       indices: 
       edges: []
@@ -183,27 +162,6 @@ TextureImporter:
       bones: []
       spriteID: 45da9419813139d41998758bc201d743
       internalID: 831566261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HUD_CharOrderIndicator
-      rect:
-        serializedVersion: 2
-        x: 1151
-        y: 1036
-        width: 480
-        height: 252
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7a6f31e58a0c064890b714aecdbb64d
-      internalID: -107854368
       vertices: []
       indices: 
       edges: []
@@ -406,7 +364,7 @@ TextureImporter:
         width: 1162
         height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,7 +385,7 @@ TextureImporter:
         width: 1159
         height: 130
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -452,6 +410,7 @@ TextureImporter:
     nameFileIdTable:
       HUD_Icons_14: -1109843386
       HUD_GuardIcon: -903168315
+      HUD_MovementIcon: 1019807259
       HUD_AttackIcon: 1579545967
       HUD_Icons_16: -1187603492
       HUD_ActionButton: 831566261
@@ -463,7 +422,6 @@ TextureImporter:
       HUD_HP_Refined: 1080328076
       HUD_SettingsButton: 37355686
       HUD_HP_SimpleFill: 1009066787
-      HUD_CharacterIcon: 1019807259
       HUD_CharIconTurn: 1108516756
       HUD_AP_IconUsed: 1036785722
       HUD_HP_RefinedFill: -566589444
