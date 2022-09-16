@@ -5,20 +5,25 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+
+
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
 
-    
+    public static bool gameComplete;
 
     void Start()
     {
-
+        gameComplete = false;
     }
 
     private void Update()
     {
-
+        if (gameComplete)
+        {
+            SceneManager.LoadScene("IndoorScene");
+        }
     }
 
 

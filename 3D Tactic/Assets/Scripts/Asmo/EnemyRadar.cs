@@ -8,19 +8,24 @@ public class EnemyRadar : MonoBehaviour
     public Transform closestEnemy;
     public bool enemyContact;
 
+    private GameObject portal;
+    public Transform closestPortal;
+    public bool portalContact;
 
     void Start()
     {
         closestEnemy = null;
         enemyContact = false;
 
+        closestPortal = null;
+        portalContact = false;
     }
 
     
     void Update()
     {
         closestEnemy = GetClosestEnemy();
-
+        closestPortal = GetClosestPortal();
         
     }
 
@@ -30,7 +35,7 @@ public class EnemyRadar : MonoBehaviour
     //    {
     //        closestEnemy = GetClosestEnemy();
     //        enemyContact = true;
-            
+
     //    }
     //}
 
@@ -42,6 +47,29 @@ public class EnemyRadar : MonoBehaviour
     //    }
     //}
 
+    public Transform GetClosestPortal()
+    {
+        portal = GameObject.FindGameObjectWithTag("Portal");
+        float closestPortal = Mathf.Infinity;
+        float currentDis = Vector3.Distance(transform.position, portal.transform.position);
+        Transform transf = null;
+
+        if(currentDis < closestPortal)
+        {
+            closestPortal = currentDis;
+            transf = portal.transform;
+            if(currentDis <= 2f)
+            {
+                portalContact = true;
+            }
+            else
+            {
+                portalContact = false;
+            }
+        }
+        return transf;
+
+    }
 
     public Transform GetClosestEnemy()
     {

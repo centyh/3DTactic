@@ -35,6 +35,7 @@ public class CharacterController : TacticsMove
             FindSelectableTiles();
             CheckMouse();
             IsAbleToAttack();
+            PressPortal();
             playerAnim.SetBool("isWalking", false);
 
         }
@@ -101,9 +102,25 @@ public class CharacterController : TacticsMove
             }
 
         }
-
     }
 
-    
+    void PressPortal()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.gameObject.tag == "Portal")
+                {
+                    UIManager.gameComplete = true;
+                }
+            }
+        }
+    }
+
+
 
 }
