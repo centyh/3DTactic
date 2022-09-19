@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
     {
         if (gameComplete)
         {
-            SceneManager.LoadScene("IndoorEnding");
+            SceneManager.LoadScene("IndoorEnd");
         }
     }
 

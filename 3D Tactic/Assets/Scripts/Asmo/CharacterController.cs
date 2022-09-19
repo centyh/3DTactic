@@ -50,9 +50,9 @@ public class CharacterController : TacticsMove
 
     void CheckMouse()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (ButtonFunctionality.moveButtonActive)
         {
-            if (ButtonFunctionality.moveButtonActive)
+            if (Input.GetMouseButtonDown(0))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
