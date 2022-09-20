@@ -12,6 +12,10 @@ public class EnemyRadar : MonoBehaviour
     public Transform closestPortal;
     public bool portalContact;
 
+    Vector3 _direction;
+    Quaternion _lookRotation;
+    public float rotationSpeed;
+
     void Start()
     {
         closestEnemy = null;
@@ -26,7 +30,11 @@ public class EnemyRadar : MonoBehaviour
     {
         closestEnemy = GetClosestEnemy();
         closestPortal = GetClosestPortal();
-        
+
+        if (enemyContact)
+        {
+            LookTowardsEnemy();
+        }
     }
 
     //private void OnTriggerStay(Collider other)
@@ -88,6 +96,7 @@ public class EnemyRadar : MonoBehaviour
                 if(currentDistance <= 2f)
                 {
                     enemyContact = true;
+                    
                 }
                 else
                 {
@@ -98,5 +107,12 @@ public class EnemyRadar : MonoBehaviour
         }
         return trans;
         
+    }
+
+    void LookTowardsEnemy()
+    {
+        _direction = (closestEnemy.position - transform.position).normalized;
+        _lookRotation = Quaternion.LookRotation(_direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
     }
 }

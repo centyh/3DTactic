@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TacticsMove : MonoBehaviour
 {
-    public int actionPoints;
+    public int playerActionPoints;
 
     public bool turn = false;
 
@@ -197,7 +197,7 @@ public class TacticsMove : MonoBehaviour
             RemoveSelectableTiles();
             moving = false;
 
-            TurnManager.EndTurn(); //End turn after movement, Action Points later
+            //TurnManager.EndTurn(); //End turn after movement, Action Points later
         }
     }
 

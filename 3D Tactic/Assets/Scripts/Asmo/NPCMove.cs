@@ -11,7 +11,6 @@ public class NPCMove : TacticsMove
     void Start()
     {
         Init();
-        
     }
 
 
@@ -32,6 +31,7 @@ public class NPCMove : TacticsMove
             FindSelectableTiles();
             actualTargetTile.target = true;
         }
+
         else
         {
             Move();

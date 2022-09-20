@@ -74,6 +74,7 @@ public class Tile : MonoBehaviour
         CheckTile(-Vector3.forward, target);
         CheckTile(Vector3.right, target);
         CheckTile(-Vector3.right, target);
+        
     }
 
     public void CheckTile(Vector3 direction, Tile target)

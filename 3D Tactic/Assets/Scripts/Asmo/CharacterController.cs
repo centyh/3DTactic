@@ -12,9 +12,17 @@ public class CharacterController : TacticsMove
 
     public Animator playerAnim;
 
+    public AudioSource swordHit;
+
+    
+
+    
+
     void Start()
     {
         Init();
+        playerActionPoints = 3;
+        
     }
 
     
@@ -22,7 +30,8 @@ public class CharacterController : TacticsMove
     void Update()
     {
         Debug.DrawRay(transform.position, transform.forward);
-        Debug.Log("PLAYER APS: " + actionPoints);
+        Debug.Log("PLAYER APS: " + playerActionPoints);
+
 
         if (!turn)
         {
@@ -37,6 +46,13 @@ public class CharacterController : TacticsMove
             IsAbleToAttack();
             PressPortal();
             playerAnim.SetBool("isWalking", false);
+            
+
+            if (playerActionPoints == 0)
+            {
+                TurnManager.EndTurn();
+                Debug.Log("AP 0!");
+            }
 
         }
 
@@ -44,7 +60,10 @@ public class CharacterController : TacticsMove
         {
             Move();
             playerAnim.SetBool("isWalking", true);
+            
         }
+
+        
         
     }
 
@@ -67,7 +86,7 @@ public class CharacterController : TacticsMove
                             MoveToTile(t);
                             buttonF.MoveButtonDeactive();
                             apSpriteChange.APUsed();
-                            
+                            playerActionPoints -= 1;
 
                         }     
                     }
@@ -92,11 +111,14 @@ public class CharacterController : TacticsMove
                     {
                         
                         playerAnim.SetTrigger("attacking");
+                        swordHit.Play();
                         int randDmg = Random.Range(40, 75);
                         enemyHealth.EnemyTakeDamage(randDmg);
                         Debug.Log(randDmg);
-                        actionPoints -= 1;
+                        playerActionPoints -= 1;
                         apSpriteChange.APUsed();
+                        
+
                     }
                 }
             }
@@ -121,6 +143,6 @@ public class CharacterController : TacticsMove
         }
     }
 
-
+    
 
 }
