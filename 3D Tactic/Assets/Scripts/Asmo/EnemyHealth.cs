@@ -34,6 +34,7 @@ public class EnemyHealth : MonoBehaviour
         if(health > 0)
         {
             health -= dmg;
+            enemyAnim.SetTrigger("isHit");
         }
         
     }
@@ -41,7 +42,7 @@ public class EnemyHealth : MonoBehaviour
     void EnemyDeath()
     {
         enemyAnim.SetBool("isDead", true);
-        Destroy(gameObject, 2.7f);
+        Destroy(gameObject, 5f);
 
     }
 }

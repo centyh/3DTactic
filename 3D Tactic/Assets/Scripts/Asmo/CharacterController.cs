@@ -11,6 +11,7 @@ public class CharacterController : TacticsMove
     public EnemyRadar radar;
 
     public Animator playerAnim;
+    public PlayerHealth playerHealth;
 
     public AudioSource swordHit;
 
@@ -21,7 +22,7 @@ public class CharacterController : TacticsMove
     void Start()
     {
         Init();
-        playerActionPoints = 3;
+        //playerActionPoints = 3;
         
     }
 
@@ -30,7 +31,6 @@ public class CharacterController : TacticsMove
     void Update()
     {
         Debug.DrawRay(transform.position, transform.forward);
-        Debug.Log("PLAYER APS: " + playerActionPoints);
 
 
         if (!turn)
@@ -63,7 +63,7 @@ public class CharacterController : TacticsMove
 
     void CheckMouse()
     {
-        if (ButtonFunctionality.moveButtonActive)
+        if (ButtonFunctionality.moveButtonActive && turn)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -92,7 +92,7 @@ public class CharacterController : TacticsMove
 
     void IsAbleToAttack()
     {
-        if (ButtonFunctionality.attackButtonActive && radar.enemyContact)
+        if (ButtonFunctionality.attackButtonActive && radar.enemyContact && turn)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -106,12 +106,12 @@ public class CharacterController : TacticsMove
                         
                         playerAnim.SetTrigger("attacking");
                         swordHit.Play();
-                        int randDmg = Random.Range(40, 75);
+                        int randDmg = Random.Range(40, 60);
                         enemyHealth.EnemyTakeDamage(randDmg);
                         Debug.Log(randDmg);
                         playerActionPoints -= 1;
                         apSpriteChange.APUsed();
-                        
+                        TurnManager.EndTurn();
 
                     }
                 }
@@ -137,6 +137,6 @@ public class CharacterController : TacticsMove
         }
     }
 
-    
+   
 
 }
