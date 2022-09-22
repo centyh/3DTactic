@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class TacticsMove : MonoBehaviour
 {
     public int playerActionPoints;
@@ -31,7 +30,7 @@ public class TacticsMove : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
 
     protected void Init() //mahdollinen nimen muutos
@@ -197,7 +196,7 @@ public class TacticsMove : MonoBehaviour
             RemoveSelectableTiles();
             moving = false;
 
-            //TurnManager.EndTurn(); //End turn after movement, Action Points later
+            TurnManager.EndTurn(); //End turn after movement, Action Points later
         }
     }
 

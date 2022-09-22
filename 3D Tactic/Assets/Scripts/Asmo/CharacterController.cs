@@ -46,13 +46,7 @@ public class CharacterController : TacticsMove
             IsAbleToAttack();
             PressPortal();
             playerAnim.SetBool("isWalking", false);
-            
-
-            if (playerActionPoints == 0)
-            {
-                TurnManager.EndTurn();
-                Debug.Log("AP 0!");
-            }
+           
 
         }
 

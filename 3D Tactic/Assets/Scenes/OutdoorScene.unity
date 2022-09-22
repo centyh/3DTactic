@@ -8110,6 +8110,7 @@ GameObject:
   - component: {fileID: 144880786}
   - component: {fileID: 144880790}
   - component: {fileID: 144880791}
+  - component: {fileID: 144880792}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -8127,7 +8128,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.34
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -8204,7 +8205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144880784}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d334d1a3148c034283f74c06a6b89ae, type: 3}
   m_Name: 
@@ -8231,6 +8232,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   enemyAnim: {fileID: 1230471836}
+--- !u!114 &144880792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144880784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896681357952ac24da47dc4b28f1c1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &147213057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40926,7 +40939,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.03
+  m_Radius: 0.1
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -40937,7 +40950,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779069880}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -40979,7 +40992,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779069880}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!4 &779069884
 Transform:
   m_ObjectHideFlags: 0
@@ -90356,6 +90369,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7657432218237117001, guid: 394f3ac1d8f20bf4cb311765650f6a5b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 394f3ac1d8f20bf4cb311765650f6a5b, type: 3}
 --- !u!1001 &1646617498
@@ -121605,7 +121623,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 7265606269164426066}
   m_AABB:
     m_Center: {x: -0.009102643, y: 0.24281555, z: 0.11799837}
-    m_Extent: {x: 0.37268722, y: 0.52249914, z: 0.36528724}
+    m_Extent: {x: 1.12, y: 0.52249914, z: 0.94}
   m_DirtyAABB: 0
 --- !u!1 &3632126085779852814
 GameObject:
@@ -121952,9 +121970,9 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6439202014034903508}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.23793308
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.97
   m_Height: 1.002609
   m_Direction: 1
   m_Center: {x: -0.01840908, y: 0.49185574, z: 0.04890518}
@@ -122132,7 +122150,7 @@ GameObject:
   - component: {fileID: 3580312030790979431}
   m_Layer: 0
   m_Name: Hero
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
