@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CharacterController : TacticsMove
 {
@@ -15,12 +16,15 @@ public class CharacterController : TacticsMove
 
     public AudioSource swordHit;
 
-    
+    public bool playerAlive;
 
+    public bool raycastBlocked;
     
 
     void Start()
     {
+        raycastBlocked = false;
+        playerAlive = true;
         Init();
         //playerActionPoints = 3;
         
@@ -31,7 +35,7 @@ public class CharacterController : TacticsMove
     void Update()
     {
         Debug.DrawRay(transform.position, transform.forward);
-
+        PlayerDeath();
 
         if (!turn)
         {
@@ -41,6 +45,8 @@ public class CharacterController : TacticsMove
 
         if (!moving)
         {
+            Debug.Log("PLAYER TURN");
+            OnMouseHover();
             FindSelectableTiles();
             CheckMouse();
             IsAbleToAttack();
@@ -72,7 +78,7 @@ public class CharacterController : TacticsMove
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.collider.tag == "Tile")
+                    if (hit.collider.tag == "Tile" && !raycastBlocked)
                     {
                         Tile t = hit.collider.GetComponent<Tile>();
                         if (t.selectable)
@@ -137,6 +143,32 @@ public class CharacterController : TacticsMove
         }
     }
 
-   
+    void PlayerDeath()
+    {
+        if(PlayerHealth.health <= 0)
+        {
+            playerAlive = false;
+            playerAnim.SetBool("isDead", true);
+        }
+        else
+        {
+            playerAnim.SetBool("isDead", false);
+        }
+        
+    }
+
+    private void OnMouseHover()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            raycastBlocked = true;
+            Debug.Log("Raycast Blocked");
+            return;
+        }
+        else
+        {
+            raycastBlocked = false;
+        }
+    }
 
 }

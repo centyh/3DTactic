@@ -10,16 +10,12 @@ public class NPCMove : TacticsMove
     public AudioSource enemySwordHit;
 
     public Animator enemyAnimator;
-    public PlayerHealth playerHealth;
 
-    public int maxHealth = 100;
-    public int currentHealth;
+    bool enemyTurn;
 
     void Start()
     {
         //enemyAnimator = GetComponent<Animator>();
-        currentHealth = maxHealth;
-        playerHealth.SetMaxHealth(maxHealth);
 
         Init();
 
@@ -35,12 +31,15 @@ public class NPCMove : TacticsMove
 
         if (!turn)
         {
+            enemyTurn = false;
             enemyAnimator.SetBool("isWalking", false);
             return;
         }
 
         if (!moving)
         {
+            enemyTurn = true;
+            Debug.Log("ENEMY TURN");
             enemyAnimator.SetBool("isWalking", false);
             AttackPlayer();
             FindNearestTarget();
@@ -113,13 +112,12 @@ public class NPCMove : TacticsMove
 
     void AttackPlayer()
     {
-        if(playerContact && turn)
+        if(playerContact && enemyTurn)
         {
+            StartCoroutine(WaitUntilAttack());
             enemyAnimator.SetTrigger("enemyAttacking");
-            enemySwordHit.Play();
-            SendDamage(20);
-
-            
+            //enemySwordHit.Play();
+            //PlayerHealth.health -= 50;
         }
         else
         {
@@ -127,10 +125,11 @@ public class NPCMove : TacticsMove
         }
     }
 
-    void SendDamage(int damage)
+    IEnumerator WaitUntilAttack()
     {
-        currentHealth -= damage;
 
-        playerHealth.SetHealth(currentHealth);
+        yield return new WaitForSeconds(0.8f);
+        enemySwordHit.Play();
+        PlayerHealth.health -= 50;
     }
 }

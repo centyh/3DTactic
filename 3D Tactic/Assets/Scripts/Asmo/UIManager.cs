@@ -10,8 +10,12 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject gameOverMenu;
 
     public static bool gameComplete;
+    public static bool playerDead;
+
+    public CharacterController charController;
 
     void Start()
     {
@@ -23,6 +27,14 @@ public class UIManager : MonoBehaviour
         if (gameComplete)
         {
             SceneManager.LoadScene("IndoorEnd");
+        }
+        else if (!charController.playerAlive)
+        {
+            gameOverMenu.SetActive(true);
+        }
+        else
+        {
+            gameOverMenu.SetActive(false);
         }
     }
 

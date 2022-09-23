@@ -5,16 +5,22 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public Slider slider;
+    private Image healthBar;
+    public float maxHealth = 100f;
+    public float currentHealth;
+    public static float health;
 
-    public void SetMaxHealth(int health)
+    void Start()
     {
-        slider.maxValue = health;
-        slider.value = health;
+
+        healthBar = GetComponent<Image>();
+        health = maxHealth;
     }
 
-    public void SetHealth(int health)
+
+    void Update()
     {
-        slider.value = health;
+        healthBar.fillAmount = health / maxHealth;
+        currentHealth = health;
     }
 }
