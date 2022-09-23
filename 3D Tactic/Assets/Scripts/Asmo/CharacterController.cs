@@ -37,9 +37,12 @@ public class CharacterController : TacticsMove
         Debug.DrawRay(transform.position, transform.forward);
         PlayerDeath();
 
+
+
         if (!turn)
         {
             playerAnim.SetBool("isWalking", false);
+            
             return;
         }
 

@@ -10,8 +10,10 @@ public class NPCMove : TacticsMove
     public AudioSource enemySwordHit;
 
     public Animator enemyAnimator;
+    public EnemyHealth enemyH;
 
     bool enemyTurn;
+    public static bool enemyAttacking;
 
     void Start()
     {
@@ -28,8 +30,9 @@ public class NPCMove : TacticsMove
     {
         closestPlayer = GetClosestPlayer();
         Debug.DrawRay(transform.position, transform.forward);
+        Debug.Log("ENEMY ATTACKING BOOLEAN: " + enemyAttacking);
 
-        if (!turn)
+        if (!turn || this.gameObject == null)
         {
             enemyTurn = false;
             enemyAnimator.SetBool("isWalking", false);
@@ -112,24 +115,25 @@ public class NPCMove : TacticsMove
 
     void AttackPlayer()
     {
-        if(playerContact && enemyTurn)
+        if(playerContact && enemyTurn && enemyH.health > 0)
         {
+            
             StartCoroutine(WaitUntilAttack());
-            enemyAnimator.SetTrigger("enemyAttacking");
-            //enemySwordHit.Play();
-            //PlayerHealth.health -= 50;
         }
         else
         {
-
+            enemyAttacking = false;
         }
     }
 
     IEnumerator WaitUntilAttack()
     {
 
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1f);
+        int randomDamage = Random.Range(15, 30);
+        enemyAttacking = true;
+        enemyAnimator.SetTrigger("enemyAttacking");
         enemySwordHit.Play();
-        PlayerHealth.health -= 50;
+        PlayerHealth.health -= randomDamage;
     }
 }

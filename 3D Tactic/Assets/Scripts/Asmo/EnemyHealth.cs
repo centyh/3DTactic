@@ -41,6 +41,7 @@ public class EnemyHealth : MonoBehaviour
 
     void EnemyDeath()
     {
+        gameObject.GetComponent<NPCMove>().enabled = false;
         enemyAnim.SetBool("isDead", true);
         Destroy(gameObject, 5f);
 

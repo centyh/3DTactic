@@ -78,8 +78,14 @@ public class GameEndingDialogue : MonoBehaviour
         else
         {
             sceneTransition.SetActive(true);
+            Invoke("ChangeSceneToMainMenu", 3f);
             gameObject.SetActive(false);
 
         }
+    }
+
+    void ChangeSceneToMainMenu()
+    {
+        SceneManager.LoadScene("MainScreen");
     }
 }

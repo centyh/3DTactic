@@ -26,11 +26,11 @@ public class UIManager : MonoBehaviour
     {
         if (gameComplete)
         {
-            SceneManager.LoadScene("IndoorEnd");
+            Invoke("GameEndingScene", 3f);
         }
         else if (!charController.playerAlive)
         {
-            gameOverMenu.SetActive(true);
+            Invoke("GameOver", 2f);
         }
         else
         {
@@ -77,5 +77,15 @@ public class UIManager : MonoBehaviour
     {
 
         SceneManager.LoadScene("OutdoorScene");
+    }
+
+    void GameOver()
+    {
+        gameOverMenu.SetActive(true);
+    }
+
+    void GameEndingScene()
+    {
+        SceneManager.LoadScene("IndoorEnd");
     }
 }

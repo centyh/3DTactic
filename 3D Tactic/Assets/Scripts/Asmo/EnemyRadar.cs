@@ -33,7 +33,7 @@ public class EnemyRadar : MonoBehaviour
 
         if (enemyContact)
         {
-            LookTowardsEnemy();
+            //LookTowardsEnemy();
         }
     }
 
@@ -109,10 +109,10 @@ public class EnemyRadar : MonoBehaviour
         
     }
 
-    void LookTowardsEnemy()
-    {
-        _direction = (closestEnemy.position - transform.position).normalized;
-        _lookRotation = Quaternion.LookRotation(_direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
-    }
+    //void LookTowardsEnemy()
+    //{
+    //    _direction = (closestEnemy.position - transform.position).normalized;
+    //    _lookRotation = Quaternion.LookRotation(_direction);
+    //    transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
+    //}
 }
