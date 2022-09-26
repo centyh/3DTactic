@@ -77,6 +77,7 @@ public class UIManager : MonoBehaviour
     {
 
         SceneManager.LoadScene("OutdoorScene");
+        Time.timeScale = 1f;
     }
 
     void GameOver()
