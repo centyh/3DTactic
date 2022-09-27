@@ -17,8 +17,8 @@ public class CharacterController : TacticsMove
     public AudioSource swordHit;
 
     public bool playerAlive;
-
     public bool raycastBlocked;
+    public bool playerTurn;
     
 
     void Start()
@@ -26,7 +26,7 @@ public class CharacterController : TacticsMove
         raycastBlocked = false;
         playerAlive = true;
         Init();
-        //playerActionPoints = 3;
+
         
     }
 
@@ -42,13 +42,14 @@ public class CharacterController : TacticsMove
         if (!turn)
         {
             playerAnim.SetBool("isWalking", false);
-            
+            playerTurn = false;
             return;
         }
 
         if (!moving)
         {
-            Debug.Log("PLAYER TURN");
+            playerTurn = true;
+            Debug.Log(playerTurn);
             OnMouseHover();
             FindSelectableTiles();
             CheckMouse();
@@ -89,7 +90,7 @@ public class CharacterController : TacticsMove
                             MoveToTile(t);
                             buttonF.MoveButtonDeactive();
                             apSpriteChange.APUsed();
-                            playerActionPoints -= 1;
+
 
                         }     
                     }
@@ -118,8 +119,7 @@ public class CharacterController : TacticsMove
                         int randDmg = Random.Range(40, 60);
                         enemyHealth.EnemyTakeDamage(randDmg);
                         Debug.Log(randDmg);
-                        playerActionPoints -= 1;
-                        apSpriteChange.APUsed();
+
                         TurnManager.EndTurn();
 
                     }

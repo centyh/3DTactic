@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private GameObject sceneTransition;
+    [SerializeField] private GameObject playerTurnText;
+    [SerializeField] private GameObject enemyTurnText;
 
     public static bool gameComplete;
     public static bool playerDead;
@@ -25,6 +27,17 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
+        if (charController.playerTurn)
+        {
+            playerTurnText.SetActive(true);
+            enemyTurnText.SetActive(false);
+        }
+        else
+        {
+            enemyTurnText.SetActive(true);
+            playerTurnText.SetActive(false);
+        }
+
         if (gameComplete)
         {
             sceneTransition.SetActive(true);

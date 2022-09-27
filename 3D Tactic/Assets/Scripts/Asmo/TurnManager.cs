@@ -10,6 +10,7 @@ public class TurnManager : MonoBehaviour
     static Queue<string> turnKey = new Queue<string>();
     static Queue<TacticsMove> turnTeam = new Queue<TacticsMove>();
 
+
     
 
     void Start()
@@ -27,6 +28,7 @@ public class TurnManager : MonoBehaviour
         {
             InitTeamTurnQueue();
         }
+
 
     }
 

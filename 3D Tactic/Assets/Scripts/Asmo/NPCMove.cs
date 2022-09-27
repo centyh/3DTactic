@@ -32,7 +32,7 @@ public class NPCMove : TacticsMove
         Debug.DrawRay(transform.position, transform.forward);
         Debug.Log("ENEMY ATTACKING BOOLEAN: " + enemyAttacking);
 
-        if (!turn || this.gameObject == null)
+        if (!turn)
         {
             enemyTurn = false;
             enemyAnimator.SetBool("isWalking", false);

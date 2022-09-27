@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TacticsMove : MonoBehaviour
 {
-    public int playerActionPoints;
+
 
     public bool turn = false;
 
