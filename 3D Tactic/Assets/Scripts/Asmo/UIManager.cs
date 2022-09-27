@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private GameObject sceneTransition;
 
     public static bool gameComplete;
     public static bool playerDead;
@@ -26,14 +27,17 @@ public class UIManager : MonoBehaviour
     {
         if (gameComplete)
         {
+            sceneTransition.SetActive(true);
             Invoke("GameEndingScene", 3f);
         }
         else if (!charController.playerAlive)
         {
+            
             Invoke("GameOver", 2f);
         }
         else
         {
+            sceneTransition.SetActive(false);
             gameOverMenu.SetActive(false);
         }
     }
